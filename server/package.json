@@ -1,0 +1,20 @@
+{
+  "name": "github-jobs",
+  "version": "1.0.0",
+  "main": "src/app.js",
+  "license": "MIT",
+  "scripts": {
+    "client": "cd client && yarn start",
+    "server": "node src/app.js",
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
+  },
+  "dependencies": {
+    "apollo-datasource-rest": "^0.9.7",
+    "apollo-server": "^2.19.2",
+    "graphql": "^15.5.0"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.7"
+  }
+}
