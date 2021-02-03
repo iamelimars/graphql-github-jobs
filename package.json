@@ -6,7 +6,10 @@
   "scripts": {
     "client": "cd client && yarn start",
     "server": "cd server && node src/app.js",
-    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
+    "client-build": "cd client && npm run build",
+    "server-build": "cd server && node src/app.js",
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
+    "build": "concurrently --kill-others-on-fail \"yarn server-build\" \"yarn client-build\""
   },
   "devDependencies": {
     "concurrently": "^5.3.0",
